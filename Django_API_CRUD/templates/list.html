@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Item</title>
+</head>
+<body>
+
+    {% for item in obj %}
+        <br><br>
+    name : <a href="{% url 'detail' id=item.pk  %}">{{ item.user }}</a>
+    <p>content : {{ item.content }}</p>
+    <p>image : {{ item.image }}</p>
+    <p>timestamp : {{ item.timestamp }}</p>
+    {% endfor %}
+
+</body>
+</html>
